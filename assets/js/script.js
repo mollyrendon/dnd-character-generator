@@ -3,3 +3,5 @@
 //Get Fetch Request
 
 //Save Functions
+
+//Randomizer
