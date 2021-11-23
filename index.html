@@ -19,6 +19,7 @@
         <div>
             <h2>Character Class</h2>
             <button id="" class="btn">Roll</button>
+            <div></div>
         </div>
 
     <!--Char. Race-->
@@ -43,16 +44,17 @@
         </div>
 
     <!--Char. Name Input-->
-        <div>
-            <h2>Name Your New DND Character</h2>
-            <form>
-                <label for="character-name">Enter Character Name Here</label>
-                <input type="text" placeholder="Character Name" id="character-name" class="name-input">
-            </form>
-            <button id="save-name" class="save-btn">Save</button>
+        <button id="save-name" class="save-btn">Save</button>
+        <div class="character-modal" id="name-modal">
+            <span class="close">&times;</span>
+            <h5 class="modal-title" id="character-name">Name Your New DND Character</h5>
+                <form>
+                    <label for="character-name-input">Enter Character Name Here</label>
+                    <div class="character-form">
+                        <input type="text">
+                    </div>
+                </form>
         </div>
-
-    <!--Modal-->
 
     </section>
     
