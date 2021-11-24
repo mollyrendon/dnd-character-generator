@@ -1,7 +1,6 @@
 /*Header Styles*/
 
 /*Background Photo Styles*/
-<<<<<<< HEAD
 :root {
 }
 
@@ -14,9 +13,20 @@
 body {
 }
 /* need to add more classes and id's on the HTML */
-=======
 
 /*Character Choices Styles*/
+
+header {
+  text-align: center;
+}
+
+.char-section {
+  text-align: center;
+}
+
+.roll-btn {
+  color: rgb(51, 51, 204);
+}
 
 /*Map Styles*/
 
@@ -29,4 +39,3 @@ body {
 /*Media Query for Tablets and Smaller*/
 
 /*Media Query for Mobile Phones and Smaller*/
->>>>>>> develop
