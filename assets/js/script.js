@@ -1,7 +1,6 @@
 let modalBtn = document.getElementById("save-name")
 let modal = document.querySelector(".character-modal")
 let closeBtn = document.querySelector(".close")
-// let characters = [data.results[0].name, data.results[1].name, data.results[2].name]
 
 
 modalBtn.onclick = function(){
@@ -25,10 +24,8 @@ var getAlignments = function() {
         if (response.ok) {
             response.json().then(function(data){
                 console.log(data.results[0].name); 
-                let characters = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[6].name]
-                console.log(characters); 
-                console.log(data.results); 
-                
+                let position = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name]
+                console.log(position); 
             })
         }
     });
@@ -43,7 +40,8 @@ var getClasses = function() {
     fetch(classesUrl).then(function(response){
         if (response.ok) {
             response.json().then(function(data){
-                
+                let character = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name, data.results[9].name, data.results[10].name, data.results[11].name]
+                console.log(character);
             })
         }
     });
@@ -54,7 +52,8 @@ var getRaces = function() {
     fetch(racesUrl).then(function(response){
         if (response.ok) {
             response.json().then(function(data){
-                
+                let status = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name]
+                console.log(status);
             })
         }
     })
