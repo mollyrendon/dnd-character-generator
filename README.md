@@ -6,12 +6,16 @@ A site for D&D players to create a randomized character and find game shops near
 
 # Built With
 
-HTML
-CSS
-Javascript
-JQuery
+* HTML
+* CSS
+* Javascript
+* JQuery
 
 # Website
+https://kelsey-schenk.github.io/dnd-character-generator/
+
+# Screenshot
+
 
 # Contribution
 
