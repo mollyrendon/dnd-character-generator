@@ -3,6 +3,7 @@ let modal = document.querySelector(".character-modal")
 let closeBtn = document.querySelector(".close")
 let btnRandom = document.querySelector("button"); 
 let result = document.querySelector("h3"); 
+let characterClass; 
 
 
 modalBtn.onclick = function(){
@@ -39,25 +40,18 @@ var getAlignments = function() {
                 }
             
                 btnRandom.addEventListener("click", () => {
+                    if (characterClass)
+                        return; 
+
                     let index = getRandomAlignment(0, alignment.length-1); 
-                    result.innerText = alignment[index]; 
+                     
+                    characterClass = alignment[index]; 
+                    result.innerText = characterClass;
+                    
                 })
             })
         }
     });
-
-    // function getRandomAlignment(max, min) {
-    //     let step1 = max + 1; 
-    //     let step2 = Math.random() * step2; 
-    //     let step3 = Math.floor(step2) + min; 
-
-    //     return result;
-    // }
-
-    // btnRandom.addEventListener("click", () => {
-    //     let index = getRandomAlignment(0, alignment.length-1); 
-    //     result.innerText = alignment[index]; 
-    // })
 
 }              
  
