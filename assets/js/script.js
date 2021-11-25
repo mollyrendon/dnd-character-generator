@@ -1,6 +1,7 @@
 // modal variables
 var modal = document.getElementById("name-modal");
 var btn = document.getElementById("save-name");
+var span = document.getElementsByClassName("close") [0];
 
 //Get Repo Function
 
@@ -46,12 +47,25 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+document.addEventListener("click", function(btn){
+    var value = form.val();
+    localStorage.setItem(key,value);
+})
 
 
 getAlignments();
 getClasses();
 getRaces();
 
-//Save Functions
 
 //Randomizer
