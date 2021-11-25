@@ -1,19 +1,7 @@
-let modalBtn = document.getElementById("save-name")
-let modal = document.querySelector(".character-modal")
-let closeBtn = document.querySelector(".close")
+// modal variables
+var modal = document.getElementById("name-modal");
+var btn = document.getElementById("save-name");
 
-modalBtn.onclick = function(){
-    modal.style.display = "block"
-}
-
-closeBtn.onclick = function(){
-}
-
-window.onclick = function(e){
-    if(e.target==modal){
-        modal.style.display = "none"
-    }
-}
 //Get Repo Function
 
 //Get Fetch Request
@@ -52,7 +40,13 @@ var getRaces = function() {
         }
     });
 }
-    
+
+// modal functions
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
 
 getAlignments();
 getClasses();
