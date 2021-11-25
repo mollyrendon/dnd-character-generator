@@ -57,15 +57,16 @@ window.onclick = function(event) {
     }
 }
 
-document.addEventListener("click", function(btn){
-    var value = form.val();
-    localStorage.setItem(key,value);
+document.addEventListener("click", function(btn) {
+    var value = document.getElementById("character-name").value;
+    localStorage.setItem("character-name",value);
 })
 
 
 getAlignments();
 getClasses();
 getRaces();
+
 
 
 //Randomizer
