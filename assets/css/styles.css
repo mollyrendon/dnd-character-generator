@@ -1,10 +1,47 @@
 /*Header Styles*/
 
 /*Background Photo Styles*/
+:root {
+}
+
+* {
+}
+
+.hero {
+}
+
+body {
+}
+/* need to add more classes and id's on the HTML */
 
 /*Character Choices Styles*/
 
+.char-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(224, 224, 235);
+}
+
+.title {
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+}
+.roll-btn {
+  background-color: rgb(51, 102, 255);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 /*Map Styles*/
+.shop-map {
+  text-align: center;
+}
+
+.shop-map h2 {
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+}
 
 /*Name Input Styles*/
 

@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+>>>>>>> css-styles
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>DND Character Generator</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Header-->
     <header>
-        <h1>D&D Character Generator</h1>
+      <h1 class="main-title">D&D Character Generator</h1>
     </header>
 
+    <!--Hero Image-->
+    <section class="hero"></section>
+
     <!--Character Choices-->
-    <section id="choices" class="main-page">
+    <section id="choices" class="char-section">
+    
     <!-- Char. Class-->
-        <div>
-            <h2>Character Class</h2>
-            <button id="" class="btn">Roll</button>
-            <div></div>
+        <div class="char-class">
+            <h2 class="title">Character Class</h2>
+            <button id="class-btn" class="roll-btn">Roll</button>
         </div>
 
     <!--Char. Race-->
-        <div>
-            <h2>Character Race</h2>
-            <button id="" class="btn">Roll</button>
+        <div class="char-race">
+            <h2 class="title">Character Race</h2>
+            <button id="race-btn" class="roll-btn">Roll</button>
         </div>
 
     <!--Char. Alignment-->
-        <div>
-            <h2>Character Alignment</h2>
-            <button id="" class="btn">Roll</button>
+        <div class="char-align">
+            <h2 class="title">Character Alignment</h2>
+            <button id="alignment-btn" class="roll-btn">Roll</button>
         </div>
+    
 
     <!--Game Shops Map-->
-        <div>
+        <div class="shop-map">
             <h2>Game Shops Near You!</h2>
             <p>Adventure Awaits! 
             <br />
             Type in your zip code below!            
             </p>
         </div>
-
+    </section>
     <!--Char. Name Input-->
         <button id="save-name" class="save-btn">Save</button>
         <div class="character-modal" id="name-modal">
@@ -55,11 +66,8 @@
                     </div>
                 </form>
         </div>
-
-    </section>
     
+
     <script src="./assets/js/script.js"></script>
-
-
-</body>
+  </body>
 </html>
