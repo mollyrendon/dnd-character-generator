@@ -58,13 +58,12 @@ window.onclick = function(event) {
 }
 
 
-document.addEventListener("click", function() {
-    var value = document.getElementById("characternameinput");
+document.getElementById("save-btn").addEventListener("click", function() {
+    var value = document.getElementById("textarea", (""));
     console.log(value);
     localStorage.setItem("character-name",JSON.stringify(value));
 })
 
-// set empty value
 
 
 getAlignments();
