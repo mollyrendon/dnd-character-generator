@@ -57,10 +57,14 @@ window.onclick = function(event) {
     }
 }
 
-document.addEventListener("click", function(btn) {
-    var value = document.getElementById("character-name").value;
-    localStorage.setItem("character-name",value);
+
+document.addEventListener("click", function() {
+    var value = document.getElementById("characternameinput");
+    console.log(value);
+    localStorage.setItem("character-name",JSON.stringify(value));
 })
+
+// set empty value
 
 
 getAlignments();
