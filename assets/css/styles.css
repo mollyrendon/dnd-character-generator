@@ -1,16 +1,25 @@
 /*Header Styles*/
 
 /*Background Photo Styles*/
-:root {
+h1 {
+  text-align: center;
+  /*font-family: Verdana, Geneva, Tahoma, ;*/
+  font-family: 'Road Rage', cursive , sans-serif;
+  font-size: 100px;
+
 }
 
-* {
-}
 
 .hero {
 }
 
 body {
+  background-image: url(/assets/images/wallpaperflare.com_wallpaper.jpg);
+  background-size: cover;
+  /*display: flex;
+  justify-content: center;*/
+  max-width: 100%;
+  background-repeat: no-repeat;
 }
 /* need to add more classes and id's on the HTML */
 
