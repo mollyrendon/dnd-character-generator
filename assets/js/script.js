@@ -1,6 +1,6 @@
 // modal variables
 var modal = document.getElementById("name-modal");
-var btn = document.getElementById("save-name");
+var btn = document.getElementById("click-here");
 var span = document.getElementsByClassName("close") [0];
 
 //Get Repo Function
