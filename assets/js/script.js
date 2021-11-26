@@ -59,9 +59,9 @@ window.onclick = function(event) {
 
 
 document.getElementById("save-btn").addEventListener("click", function() {
-    var characterName = document.getElementById("textarea");
-    console.log(characterName);
-    localStorage.setItem("character-name",characterName);
+    var characterName = document.getElementById("characternameinput").value;
+    console.log(JSON.stringify(characterName));
+    localStorage.setItem("characternameinput",JSON.stringify(characterName));
 })
 
 
