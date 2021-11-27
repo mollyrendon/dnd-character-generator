@@ -19,6 +19,7 @@ body {
 .char-section {
   display: flex;
   flex-direction: row;
+  /* flex-direction: column; */
   text-align: center;
   background-color: rgb(224, 224, 235);
   opacity: 0.5;
@@ -45,12 +46,6 @@ textarea {
 }
 
 /*Name Input Styles*/
-
-.character-title {
-  text-align: center;
-  color: rgb(0, 102, 255);
-  font-size: 30px;
-}
 
 .click-btn {
   background-color: rgb(0, 102, 255);
