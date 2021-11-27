@@ -88,6 +88,10 @@ textarea {
   font-weight: bold;
 }
 
+.close {
+  font-size: 30px;
+}
+
 /* UTILITIES */
 
 /*Media Query for Smaller Desktop Screens and Smaller*/
