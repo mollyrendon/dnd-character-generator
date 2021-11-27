@@ -1,9 +1,15 @@
 let modalBtn = document.getElementById("save-name")
 let modal = document.querySelector(".character-modal")
 let closeBtn = document.querySelector(".close")
-let btnRandom = document.querySelector("button"); 
-let result = document.querySelector("h3"); 
+let btnRandom = document.getElementById("ment"); 
+let btnRandom2 = document.getElementById("sss"); 
+let btnRandom3 = document.getElementById("rrr"); 
+let result = document.getElementById("alignment"); 
+let result1 = document.getElementById("race"); 
+let result2 = document.getElementById("class")
 let characterClass; 
+let characterRace;
+let characterAlignment; 
 
 
 modalBtn.onclick = function(){
@@ -64,6 +70,27 @@ var getClasses = function() {
             response.json().then(function(data){
                 let classes = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name, data.results[9].name, data.results[10].name, data.results[11].name]
                 console.log(classes);
+
+                function getRandomClasses(min, max) {
+                    let step1 = max - min + 1; 
+                    let step2 = Math.random() * step1; 
+                    let result1 = Math.floor(step2) + min; 
+            
+                    return result1;
+                    
+                }
+            
+                btnRandom2.addEventListener("click", () => {
+                    if (characterRace)
+                        return; 
+
+                    let index = getRandomClasses(0, classes.length-1); 
+                     
+                    characterRace = classes[index]; 
+                    result1.innerText = characterRace;
+                    
+                })
+
             })
         }
     });
@@ -76,6 +103,27 @@ var getRaces = function() {
             response.json().then(function(data){
                 let race = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name]
                 console.log(race);
+
+                function getRandomRaces(min, max) {
+                    let step1 = max - min + 1; 
+                    let step2 = Math.random() * step1; 
+                    let result2 = Math.floor(step2) + min; 
+            
+                    return result2;
+                    
+                }
+            
+                btnRandom3.addEventListener("click", () => {
+                    if (characterAlignment)
+                        return; 
+
+                    let index = getRandomRaces(0, race.length-1); 
+                     
+                    characterAlignment = race[index]; 
+                    result2.innerText = characterAlignment;
+                    
+                })
+
             })
         }
     })
