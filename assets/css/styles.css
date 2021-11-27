@@ -45,6 +45,19 @@ textarea {
 }
 
 /*Name Input Styles*/
+
+.character-title {
+  text-align: center;
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+}
+
+.click-btn {
+  background-color: rgb(0, 102, 255);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
 .character-modal {
   display: none;
   position: fixed;
@@ -54,7 +67,11 @@ textarea {
   width: 100%;
   height: 100%;
   overflow: auto;
-  /* background-color: white; */
+}
+
+.character-label {
+  color:rgb(0, 102, 255);
+  font-size: 15px;
 }
 
 .modal-body {
@@ -63,6 +80,17 @@ textarea {
   padding: 20px;
   border: 1px solid;
   width: 50%;
+}
+
+.modal-title {
+  color: rgb(0, 102, 255);
+  font-size: 30px;
+}
+
+.btn {
+  background-color: rgb(0, 102, 255);
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* UTILITIES */
