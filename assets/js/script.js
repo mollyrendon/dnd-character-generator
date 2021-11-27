@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-//Get Repo Function
-
-//Get Fetch Request
-=======
-// modal variables
+//modal variables
 var modal = document.getElementById("name-modal");
 var btn = document.getElementById("click-here");
 var span = document.getElementsByClassName("close") [0];
@@ -47,7 +42,7 @@ var getRaces = function() {
     });
 }
 
-// modal functions
+//modal functions
 btn.onclick = function() {
     modal.style.display = "block";
 }
@@ -74,7 +69,6 @@ document.getElementById("save-btn").addEventListener("click", function() {
 getAlignments();
 getClasses();
 getRaces();
->>>>>>> 0d528104da5f8da3efc793153d0ce61ed5492cc6
 
 
 
