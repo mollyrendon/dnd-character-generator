@@ -1,6 +1,8 @@
-/*Header Styles*/
+:root {
+  --primary-color: rgb(0, 102, 255);
+}
 
-/*Background Photo Styles*/
+/*Header Styles*/
 h1 {
   text-align: center;
   font-family: "Road Rage", cursive, sans-serif;
@@ -19,24 +21,26 @@ body {
 .char-section {
   display: flex;
   flex-direction: row;
-  /* flex-direction: column; */
   text-align: center;
   background-color: rgb(224, 224, 235);
   opacity: 0.5;
   justify-content: space-around;
+  margin: 10px;
 }
 
 .title {
-  color: rgb(0, 102, 255);
+  color: var(--primary-color);
   font-size: 30px;
 }
 
 textarea {
   border-radius: 5px;
+  padding-bottom: 20px;
+  margin: 20px;
 }
 
 .roll-btn {
-  background-color: rgb(51, 102, 255);
+  background-color: var(--primary-color);
   border-radius: 5px;
   font-weight: bold;
 }
@@ -48,9 +52,13 @@ textarea {
 /*Name Input Styles*/
 
 .click-btn {
-  background-color: rgb(0, 102, 255);
+  background-color: var(--primary-color);
   border-radius: 5px;
   font-weight: bold;
+}
+
+.click-btn:hover {
+  background-color: rgb(0, 153, 255);
 }
 
 .character-modal {
@@ -65,7 +73,7 @@ textarea {
 }
 
 .character-label {
-  color:rgb(0, 102, 255);
+  color: var(--primary-color);
   font-size: 15px;
 }
 
@@ -78,14 +86,18 @@ textarea {
 }
 
 .modal-title {
-  color: rgb(0, 102, 255);
+  color: var(--primary-color);
   font-size: 30px;
 }
 
 .btn {
-  background-color: rgb(0, 102, 255);
+  background-color: var(--primary-color);
   border-radius: 5px;
   font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgb(0, 153, 255);
 }
 
 .close {
@@ -95,6 +107,21 @@ textarea {
 /* UTILITIES */
 
 /*Media Query for Smaller Desktop Screens and Smaller*/
+@media screen and (max-width: 980px) {
+  header h1 {
+    text-align: center;
+  }
+
+  .char-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body {
+    max-width: 100%;
+  }
+}
 
 /*Media Query for Tablets and Smaller*/
 
