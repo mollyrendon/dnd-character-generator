@@ -1,31 +1,25 @@
+//modal variables
+var modal = document.getElementById("name-modal");
+var btn = document.getElementById("click-here");
+var span = document.getElementsByClassName("close") [0];
 let modalBtn = document.getElementById("save-name")
-let modal = document.querySelector(".character-modal")
 let closeBtn = document.querySelector(".close")
-let btnRandom = document.getElementById("alignment-btn"); 
-let btnRandom2 = document.getElementById("class-btn"); 
-let btnRandom3 = document.getElementById("race-btn"); 
-let result = document.getElementById("align-input"); 
-let result1 = document.getElementById("class-input"); 
-let result2 = document.getElementById("race-input")
-let characterClass; 
-let characterRace;
-let characterAlignment; 
+
+let btnAlignment = document.getElementById("alignment-btn");
+let btnClass = document.getElementById("class-btn");
+let btnRace = document.getElementById("race-btn");
+
+let resultAlignment = document.getElementById("align-input");
+let resultClass = document.getElementById("class-input");
+let resultRace = document.getElementById("race-input");
+
+//let characterAlignment;
+//let characterClass;
+//let characterRace;
 
 
-// modalBtn.onclick = function(){
-//     modal.style.display = "block"
-// }
 
-// closeBtn.onclick = function(){
-// }
-
-// window.onclick = function(e){
-//     if(e.target==modal){
-//         modal.style.display = "none"
-//     }
-// }
-// //Get Repo Function
-
+//Get Repo Function
 
 //Get Fetch Request
 var getAlignments = function() {
@@ -36,31 +30,36 @@ var getAlignments = function() {
                 let alignment = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name]
                 console.log(alignment); 
 
-                function getRandomAlignment(min, max) {
-                    let step1 = max - min + 1; 
-                    let step2 = Math.random() * step1; 
-                    let result = Math.floor(step2) + min; 
-            
-                    return result;
-                    
-                }
-            
-                btnRandom.addEventListener("click", () => {
-                    if (characterClass)
-                        return; 
 
-                    let index = getRandomAlignment(0, alignment.length-1); 
-                     
-                    characterClass = alignment[index]; 
-                    result.innerText = characterClass;
-                    
+
+            
+                btnAlignment.addEventListener("click", function() {
+                    var getRollAll = function() {
+                        var diceRoll = "http://roll.diceapi.com/json/d8"
+                        fetch(diceRoll).then(function(response){
+                            if(response.ok) {
+                                response.json().then(function(data){
+                                    let allDice = data.dice[0].value -1
+                                    characterAlignment = alignment[allDice]; 
+                                    resultAlignment.innerText = characterAlignment;
+                                    console.log(allDice);
+                                    console.log(characterAlignment);
+                                return characterAlignment;
+                                }) 
+                            }
+                        });
+                    }
+
+
+                    getRollAll(); 
+
                 })
             })
         }
     });
 
 }              
- 
+
 
 
 var getClasses = function() {
@@ -71,30 +70,31 @@ var getClasses = function() {
                 let classes = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name, data.results[9].name, data.results[10].name, data.results[11].name]
                 console.log(classes);
 
-                function getRandomClasses(min, max) {
-                    let step1 = max - min + 1; 
-                    let step2 = Math.random() * step1; 
-                    let result1 = Math.floor(step2) + min; 
-            
-                    return result1;
-                    
-                }
-            
-                btnRandom2.addEventListener("click", () => {
-                    if (characterRace)
-                        return; 
 
-                    let index = getRandomClasses(0, classes.length-1); 
-                     
-                    characterRace = classes[index]; 
-                    result1.innerText = characterRace;
-                    
+                btnClass.addEventListener("click", function() {
+                    var getRollAll = function() {
+                        var diceRoll = "http://roll.diceapi.com/json/d11"
+                        fetch(diceRoll).then(function(response){
+                            if(response.ok) {
+                                response.json().then(function(data){
+                                    let allDice = data.dice[0].value -1
+                                    characterClass = classes[allDice]; 
+                                    resultClass.innerText = characterClass;
+                                    console.log(allDice);
+                                    console.log(characterClass);
+                                return;
+                                }) 
+                            }
+                        });
+                    }
+
+                    getRollAll(); 
+
                 })
-
             })
         }
     });
-};
+}
 
 var getRaces = function() {
     var racesUrl = "https://www.dnd5eapi.co/api/races/";
@@ -104,39 +104,53 @@ var getRaces = function() {
                 let race = [data.results[0].name, data.results[1].name, data.results[2].name, data.results[3].name, data.results[4].name, data.results[5].name, data.results[6].name, data.results[7].name, data.results[8].name]
                 console.log(race);
 
-                function getRandomRaces(min, max) {
-                    let step1 = max - min + 1; 
-                    let step2 = Math.random() * step1; 
-                    let result2 = Math.floor(step2) + min; 
-            
-                    return result2;
-                    
-                }
-            
-                btnRandom3.addEventListener("click", () => {
-                    if (characterAlignment)
-                        return; 
+                btnRace.addEventListener("click", function() {
+                    var getRollAll = function() {
+                        var diceRoll = "http://roll.diceapi.com/json/d9"
+                        fetch(diceRoll).then(function(response){
+                            if(response.ok) {
+                                response.json().then(function(data){
+                                    let allDice = data.dice[0].value - 1
+                                    characterRace = race[allDice]; 
+                                    resultRace.innerText = characterRace;
+                                    console.log(allDice);
+                                    console.log(characterRace);
+                                return;
+                                }) 
+                            }
+                        });
+                    }
 
-                    let index = getRandomRaces(0, race.length-1); 
-                     
-                    characterAlignment = race[index]; 
-                    result2.innerText = characterAlignment;
-                    
+
+                     getRollAll(); 
+
                 })
-
             })
         }
     })
 };
-    
-// var randomPerson = ""
-// function generateCharacter() {
-//     randomPerson = ([position], [character]); 
-//         randomPerson = randomPerson[Math.floor(Math.random() * randomPerson.length)]; 
-//         console.log(randomPerson); 
 
-//         return randomPerson; 
+//modal functions
+btn.onclick = function() {
+    modal.style.display = "block";
+}
 
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+document.getElementById("save-btn").addEventListener("click", function() {
+    var characterName = document.getElementById("characternameinput").value;
+    console.log(JSON.stringify(characterName));
+    localStorage.setItem("characternameinput",JSON.stringify(characterName));
+})
 
 
 
@@ -146,6 +160,6 @@ getRaces();
 
 
 
-//Save Functions
-
 //Randomizer
+
+//Local Storage
