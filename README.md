@@ -2,7 +2,7 @@
 
 # Purpose
 
-A site for D&D players to create a randomized character.
+A site for D&D players to create and name a DND character with randomized class, race, and alignment.
 
 # Built With
 
