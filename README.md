@@ -2,14 +2,13 @@
 
 # Purpose
 
-A site for D&D players to create a randomized character and find game shops near them.
+A site for D&D players to create a randomized character.
 
 # Built With
 
 * HTML
 * CSS
 * Javascript
-* JQuery
 
 # Website
 https://kelsey-schenk.github.io/dnd-character-generator/
