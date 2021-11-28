@@ -1,30 +1,30 @@
 let modalBtn = document.getElementById("save-name")
 let modal = document.querySelector(".character-modal")
 let closeBtn = document.querySelector(".close")
-let btnRandom = document.getElementById("ment"); 
-let btnRandom2 = document.getElementById("sss"); 
-let btnRandom3 = document.getElementById("rrr"); 
-let result = document.getElementById("alignment"); 
-let result1 = document.getElementById("race"); 
-let result2 = document.getElementById("class")
+let btnRandom = document.getElementById("alignment-btn"); 
+let btnRandom2 = document.getElementById("class-btn"); 
+let btnRandom3 = document.getElementById("race-btn"); 
+let result = document.getElementById("align-input"); 
+let result1 = document.getElementById("class-input"); 
+let result2 = document.getElementById("race-input")
 let characterClass; 
 let characterRace;
 let characterAlignment; 
 
 
-modalBtn.onclick = function(){
-    modal.style.display = "block"
-}
+// modalBtn.onclick = function(){
+//     modal.style.display = "block"
+// }
 
-closeBtn.onclick = function(){
-}
+// closeBtn.onclick = function(){
+// }
 
-window.onclick = function(e){
-    if(e.target==modal){
-        modal.style.display = "none"
-    }
-}
-//Get Repo Function
+// window.onclick = function(e){
+//     if(e.target==modal){
+//         modal.style.display = "none"
+//     }
+// }
+// //Get Repo Function
 
 
 //Get Fetch Request
