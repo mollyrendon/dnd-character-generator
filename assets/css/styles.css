@@ -39,6 +39,7 @@ textarea {
   border-radius: 5px;
   padding-bottom: 20px;
   margin: 20px;
+  resize: none;
 }
 
 .roll-btn {
