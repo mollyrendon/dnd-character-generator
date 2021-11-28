@@ -1,5 +1,7 @@
 :root {
-  --primary-color: rgb(0, 102, 255);
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(0, 153, 51);
+  --tertiary-color: rgb(153, 255, 153);
 }
 
 /*Header Styles*/
@@ -22,8 +24,7 @@ body {
   display: flex;
   flex-direction: row;
   text-align: center;
-  background-color: rgb(224, 224, 235);
-  opacity: 0.5;
+  background-color: rgba(224, 224, 235, 0.5);
   justify-content: space-around;
   margin: 10px;
 }
@@ -31,6 +32,7 @@ body {
 .title {
   color: var(--primary-color);
   font-size: 30px;
+  font-weight: bold;
 }
 
 textarea {
@@ -40,25 +42,25 @@ textarea {
 }
 
 .roll-btn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   font-weight: bold;
 }
 
 .roll-btn:hover {
-  background-color: rgb(0, 153, 255);
+  background-color: var(--tertiary-color);
 }
 
 /*Name Input Styles*/
 
 .click-btn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   font-weight: bold;
 }
 
 .click-btn:hover {
-  background-color: rgb(0, 153, 255);
+  background-color: var(--tertiary-color);
 }
 
 .character-modal {
@@ -91,13 +93,13 @@ textarea {
 }
 
 .btn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   font-weight: bold;
 }
 
 .btn:hover {
-  background-color: rgb(0, 153, 255);
+  background-color: var(--tertiary-color);
 }
 
 .close {
