@@ -2,12 +2,8 @@
 var modal = document.getElementById("name-modal");
 var btn = document.getElementById("click-here");
 var span = document.getElementsByClassName("close") [0];
-<<<<<<< .merge_file_a26556
 
-=======
-let modalBtn = document.getElementById("save-name")
-let closeBtn = document.querySelector(".close")
-
+// trait variables
 let btnAlignment = document.getElementById("alignment-btn");
 let btnClass = document.getElementById("class-btn");
 let btnRace = document.getElementById("race-btn");
@@ -16,14 +12,7 @@ let resultAlignment = document.getElementById("align-input");
 let resultClass = document.getElementById("class-input");
 let resultRace = document.getElementById("race-input");
 
-//let characterAlignment;
-//let characterClass;
-//let characterRace;
 
-
-
->>>>>>> .merge_file_a30592
-//Get Repo Function
 
 //Get Fetch Request
 var getAlignments = function() {
@@ -126,7 +115,7 @@ var getRaces = function() {
                     }
 
 
-                     getRollAll(); 
+                    getRollAll(); 
 
                 })
             })
@@ -143,18 +132,6 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
-<<<<<<< .merge_file_a26556
-//modal functions
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-=======
->>>>>>> .merge_file_a30592
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -166,7 +143,23 @@ document.getElementById("save-btn").addEventListener("click", function() {
     var characterName = document.getElementById("characternameinput").value;
     console.log(JSON.stringify(characterName));
     localStorage.setItem("characternameinput",JSON.stringify(characterName));
+
+    var characterClass1 = document.getElementById("class-input").value;
+    console.log(JSON.stringify(characterClass1));
+    localStorage.setItem("class-input",JSON.stringify(characterClass1));
+
+    var characterRace1 = document.getElementById("race-input").value;
+    console.log(JSON.stringify(characterRace1));
+    localStorage.setItem("race-input",JSON.stringify(characterRace1));
+
+    var characterAlignment1 = document.getElementById("align-input").value;
+    console.log(JSON.stringify(characterAlignment1));
+    localStorage.setItem("align-input",JSON.stringify(characterAlignment1));
 })
+
+var displayCharacter = function () {
+
+}
 
 
 
