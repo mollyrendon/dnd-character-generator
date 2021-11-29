@@ -12,6 +12,7 @@ let resultAlignment = document.getElementById("align-input");
 let resultClass = document.getElementById("class-input");
 let resultRace = document.getElementById("race-input");
 
+var characterContainerEl = document.querySelector("#generated-character");
 
 
 //Get Fetch Request
@@ -158,14 +159,19 @@ document.getElementById("save-btn").addEventListener("click", function() {
 })
 
 var displayCharacter = function () {
+    var characterAlignment1 = document.createElement("h6");
+    characterAlignment1.classList = "list-item flex-row justify-space-between align-center";
 
-}
+    characterAlignment1.appendChild(characterContainerEl);
+
+};
 
 
 
 getAlignments();
 getClasses();
 getRaces();
+displayCharacter();
 
 
 
