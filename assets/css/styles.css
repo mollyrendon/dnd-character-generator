@@ -22,7 +22,7 @@ body {
 
 .char-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
   background-color: rgba(224, 224, 235, 0.5);
   justify-content: space-around;
