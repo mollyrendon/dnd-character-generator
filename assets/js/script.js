@@ -32,11 +32,11 @@ var getAlignments = function() {
             
                 btnAlignment.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "http://roll.diceapi.com/json/d8";
+                        var diceRoll = "https://rolz.org/api/?1d9.json"
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
-                                    let allDice = data.dice[0].value -1
+                                    let allDice = data.result -1
                                     characterAlignment = alignment[allDice]; 
                                     resultAlignment.innerText = characterAlignment;
                                 return characterAlignment;
@@ -67,11 +67,11 @@ var getClasses = function() {
 
                 btnClass.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "http://roll.diceapi.com/json/d11";
+                        var diceRoll = "https://rolz.org/api/?1d12.json"
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
-                                    let allDice = data.dice[0].value -1
+                                    let allDice = data.result -1
                                     characterClass = classes[allDice]; 
                                     resultClass.innerText = characterClass;
                                 return;
@@ -97,11 +97,11 @@ var getRaces = function() {
 
                 btnRace.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "http://roll.diceapi.com/json/d9";
+                        var diceRoll = "https://rolz.org/api/?1d9.json"
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
-                                    let allDice = data.dice[0].value - 1
+                                    let allDice = data.result - 1
                                     characterRace = race[allDice]; 
                                     resultRace.innerText = characterRace;
                                 return;
