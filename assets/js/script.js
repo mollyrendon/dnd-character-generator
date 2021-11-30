@@ -14,7 +14,10 @@ let resultClass = document.getElementById("class-input");
 let resultRace = document.getElementById("race-input");
 
 var characterContainerEl = document.querySelector("#generated-character");
-
+var alignInputElement = document.createElement("h3");
+var classInputElement = document.createElement("h3");
+var raceInputElement = document.createElement("h3");
+var nameInputElement = document.createElement("h3");
 
 //Get Fetch Request
 var getAlignments = function() {
@@ -136,6 +139,7 @@ span.onclick = function () {
 
 saveBtn.addEventListener("click", function() {
     modal.style.display = "none";
+    window.location.reload();
 });
 
 
@@ -144,7 +148,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
 
 
 
@@ -167,12 +170,22 @@ document.getElementById("save-btn").addEventListener("click", function() {
 })
 
 var displayCharacter = function () {
-    var characterAlignment1 = document.createElement("h6");
-    characterAlignment1.classList = "list-item flex-row justify-space-between align-center";
+    var alignInput = JSON.parse(localStorage.getItem("align-input"));
+    var classInput = JSON.parse(localStorage.getItem("class-input"));
+    var raceInput = JSON.parse(localStorage.getItem("race-input"));
+    var nameInput = JSON.parse(localStorage.getItem("characternameinput"));
+    
+    alignInputElement.textContent = alignInput
+    classInputElement.textContent = classInput
+    raceInputElement.textContent = raceInput
+    nameInputElement.textContent = nameInput
 
-    characterAlignment1.appendChild(characterContainerEl);
-
+    characterContainerEl.appendChild(alignInputElement)
+    characterContainerEl.appendChild(classInputElement)
+    characterContainerEl.appendChild(raceInputElement)
+    characterContainerEl.appendChild(nameInputElement)
 };
+
 
 
 
