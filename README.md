@@ -14,9 +14,7 @@ A site for D&D players to create and name a DND character with randomized class,
 https://kelsey-schenk.github.io/dnd-character-generator/
 
 # Screenshot
-![image](https://user-images.githubusercontent.com/90290649/143787058-d75ce077-e085-4be3-9b86-614fc6441376.png)
-
-https://kelsey-schenk.github.io/dnd-character-generator/
+![image](https://user-images.githubusercontent.com/90290649/143967716-c689ae97-c4d3-44aa-8646-9a9b2d1b5a76.png)
 
 # Contribution
 
