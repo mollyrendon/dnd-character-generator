@@ -33,7 +33,7 @@ var getAlignments = function() {
             
                 btnAlignment.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "https://roll.diceapi.com/json/d8"
+                        var diceRoll = "http://roll.diceapi.com/json/d8";
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
@@ -71,7 +71,7 @@ var getClasses = function() {
 
                 btnClass.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "https://roll.diceapi.com/json/d11"
+                        var diceRoll = "http://roll.diceapi.com/json/d11";
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
@@ -104,7 +104,7 @@ var getRaces = function() {
 
                 btnRace.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "https://roll.diceapi.com/json/d9"
+                        var diceRoll = "http://roll.diceapi.com/json/d9";
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
