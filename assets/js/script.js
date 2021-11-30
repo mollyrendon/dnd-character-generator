@@ -2,6 +2,7 @@
 var modal = document.getElementById("name-modal");
 var btn = document.getElementById("click-here");
 var span = document.getElementsByClassName("close") [0];
+var saveBtn = document.getElementById("save-btn");
 
 // trait variables
 let btnAlignment = document.getElementById("alignment-btn");
@@ -133,11 +134,18 @@ span.onclick = function () {
     modal.style.display = "none";
 }
 
+saveBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+});
+
+
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
+
+
 
 
 document.getElementById("save-btn").addEventListener("click", function() {
