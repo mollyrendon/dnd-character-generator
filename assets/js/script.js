@@ -67,7 +67,7 @@ var getClasses = function() {
 
                 btnClass.addEventListener("click", function() {
                     var getRollAll = function() {
-                        var diceRoll = "https://rolz.org/api/?1d13.json"
+                        var diceRoll = "https://rolz.org/api/?1d12.json"
                         fetch(diceRoll).then(function(response){
                             if(response.ok) {
                                 response.json().then(function(data){
