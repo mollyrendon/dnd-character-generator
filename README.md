@@ -24,7 +24,7 @@
 
 
   # Questions
-  For any questions please contact us at our GitHub accounts. 
+  For any questions please contact mollyrendon at this email molly.rendon@outlook.com. 
 
     
   https://kelsey-schenk.github.io/dnd-character-generator/
