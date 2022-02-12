@@ -1,21 +1,31 @@
 # D&D Character Generator
+  
+  # Description  
+    A site for D&D players to create and name a DND character with randomized class, race, and alignment.  The following technologies were used to build this site:  HTML, CSS, and JavaScript.
 
-# Purpose
+  # Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
-A site for D&D players to create and name a DND character with randomized class, race, and alignment.
+  # Installation
+ 
 
-# Built With
+  # Usage
 
-* HTML
-* CSS
-* Javascript
+ 
+  # Contributing  
+  Made by Hilliard Stamper, Jeffrey Johnson, Josh DiFrancesco, Kelsey Schenk, and Molly Rendon
 
-# Website
-https://kelsey-schenk.github.io/dnd-character-generator/
+  # Tests
 
-# Screenshot
-![image](https://user-images.githubusercontent.com/90290649/143967716-c689ae97-c4d3-44aa-8646-9a9b2d1b5a76.png)
 
-# Contribution
+  # Questions
+  For any questions please contact mollyrendon at this email molly.rendon@outlook.com.
 
-Made by Hilliard Stamper, Jeffrey Johnson, Josh DiFrancesco, Kelsey Schenk, and Molly Rendon
+    https://mollyrendon.github.io/dnd-generator/
+
+  ![image](https://user-images.githubusercontent.com/90290649/143967716-c689ae97-c4d3-44aa-8646-9a9b2d1b5a76.png)
